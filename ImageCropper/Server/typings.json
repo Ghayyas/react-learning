@@ -1,0 +1,11 @@
+{
+  "name": "server",
+  "dependencies": {
+    "body-parser": "registry:npm/body-parser#1.15.2+20161116154925",
+    "cors": "registry:npm/cors#2.7.0+20160902012746",
+    "express": "registry:npm/express#4.14.0+20170217205433"
+  },
+  "globalDependencies": {
+    "node": "registry:dt/node#7.0.0+20170310052549"
+  }
+}

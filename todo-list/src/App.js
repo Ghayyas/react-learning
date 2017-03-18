@@ -18,7 +18,6 @@ class App extends Component {
    this.handleChange = this.handleChange.bind(this);
    this.submit = this.submit.bind(this);
    this.clearAll = this.clearAll.bind(this);
-   
 
 }
 
@@ -32,10 +31,6 @@ submit(){
   this.id1++;
    this.array.push(this.state);
    this.setState({value:""});
-  //  setTimeout(function() {
-   console.log(this.state);  
-  //  }, 2000);
-   
 }
 clearAll(){
   this.id1 = 0; 
@@ -43,6 +38,10 @@ clearAll(){
    this.setState({});
      console.log("arrra",this.array);
 
+}
+clearSelected(i){
+     this.array.splice(i,1);
+     this.setState({});
 }
   
   render() {
@@ -59,8 +58,8 @@ clearAll(){
        <ul>
         {this.array
         .map(item => (
-          <li key={item.id}>{item.value}</li>
-        ))}
+          <li key={item.id}>{item.value} <span onClick={()=>{this.clearSelected(item)}} style={{position: 'absolute',right: '40px'}}>X</span></li>
+       ))}
       </ul>
       </div>
     );
