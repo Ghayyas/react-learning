@@ -19,3 +19,5 @@ yarn-error.log*
 #Server
 /Server/node_modules
 /Server/typings
+/build
+/functions

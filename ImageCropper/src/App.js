@@ -6,15 +6,15 @@ import axios from 'axios';
 import FormData from 'form-data';
 
 
-setInterval(()=>{
-    console.clear();
-},3000)
+// setInterval(()=>{
+//     console.clear();
+// },3000)
 
 class App extends Component {
     
     constructor(props) {
         super(props);
-        axios.defaults.baseURL = 'http://localhost:3001';
+        axios.defaults.baseURL = 'https://react-image-resizer.herokuapp.com';
 
        this.state = {
            file: '',
@@ -118,7 +118,7 @@ createLoader(){
             width: this.state.width,
             height: this.state.height
         }
-             Jimp.read(res.data._body.url)
+             Jimp.read(res.data._body.secure_url)
              .then((img)=>{
             img.resize(this.control.width,this.control.height)
                .quality(this.state.quality)
