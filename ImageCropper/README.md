@@ -1,6 +1,6 @@
-#Simple Image Resizer in React Js.
+# Simple Image Resizer in React Js.
 
-#Modules which are used:
+# Modules which are used:
 
 1) Nodejs with Express
 2) Cloudnairy
